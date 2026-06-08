@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLH9GD9SVR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JLH9GD9SVR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[고달초] 인도네시아 반둥 국제교류·체험 - 스마트 가이드</title>
+    <meta name="description" content="고달초등학교 2026 인도네시아 반둥 Temasek Independent School 국제교류·체험 3박5일 공식 스마트 가이드북">
+    <meta property="og:title" content="[고달초] 🇮🇩 반둥 국제교류·체험 스마트 가이드북">
+    <meta property="og:description" content="고달초등학교 5·6학년 학생 및 학부모님께 공유드리는 상세 일정 및 교육 프로그램 안내입니다.">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/640px-Gedung_Sate_Bandung.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{qb:'#0284c7'}}}}</script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root{--qb:#0284c7;--qb-dark:#0369a1}
+        body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#1e293b}
+        .hero-bg{background:linear-gradient(rgba(15,23,42,.55),rgba(2,132,199,.75)),url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/1280px-Gedung_Sate_Bandung.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+        @media(max-width:768px){.hero-bg{background-attachment:scroll}}
+        #map{height:360px;width:100%;border-radius:1rem;box-shadow:0 10px 15px -3px rgba(0,0,0,.1);z-index:10}
+        @media(min-width:1024px){#map{height:600px}}
+        .no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+        .animate-fade-in-up{animation:fadeInUp .8s ease-out forwards}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        section{scroll-margin-top:70px}
+        .timeline-dot{position:absolute;left:-25px;top:4px;width:16px;height:16px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--tw-ring-color);background-color:var(--tw-bg-color)}
+        @media(max-width:1023px){.timeline-dot{left:-20px;top:6px;width:14px;height:14px;border-width:2px}}
+        .map-marker-bubble{background:#fff;border-radius:50%;box-shadow:0 4px 6px rgba(0,0,0,.3);border:2px solid #fff;display:flex;align-items:center;justify-content:center;opacity:0}
+        @keyframes popIn{0%{transform:scale(0);opacity:0}80%{transform:scale(1.2);opacity:1}100%{transform:scale(1);opacity:1}}
+        .schedule-media{display:flex;flex-direction:column;gap:.5rem;margin-top:.25rem}
+        @media(min-width:768px){.schedule-media{flex-direction:row;align-items:flex-start;gap:1rem}.schedule-media .schedule-desc{flex:1;min-width:0}}
+        .schedule-thumb{display:block;width:100%;max-width:10.5rem;aspect-ratio:4/3;object-fit:cover;border-radius:.75rem;border:1px solid #e2e8f0;box-shadow:0 4px 12px rgba(15,23,42,.08);flex-shrink:0}
+        @media(min-width:768px){.schedule-thumb{max-width:11.5rem}}
+        .contact-row{display:flex;align-items:center;gap:.75rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:.75rem;padding:.875rem 1rem}
+        .contact-badge{flex-shrink:0;width:3rem;text-align:center;font-size:.65rem;font-weight:800;letter-spacing:-.02em;background:rgba(2,132,199,.25);color:#7dd3fc;padding:.35rem .25rem;border-radius:.5rem}
+        .qb-credit{max-width:36rem;margin:0 auto;padding-top:1rem;border-top:1px solid #e2e8f0}
+        .qb-credit-badge{font-size:.65rem;font-weight:800;letter-spacing:.04em;color:var(--qb);margin-bottom:.5rem}
+        .qb-credit-text{font-size:.75rem;color:#64748b;line-height:1.6}.qb-credit-text strong{color:#1e293b;font-weight:700}
+        @media screen{#print-area{display:none!important}}
+        @media print{
+            @page{size:A4 portrait;margin:14mm 16mm}
+            *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+            html,body{background:#fff!important;color:#000!important;height:auto!important;overflow:visible!important}
+            header,footer,section:not(#print-area),.no-print,#toast,#custom-confirm,#phrase-modal{display:none!important}
+            main,body{padding:0!important;margin:0!important;width:100%!important;background:#fff!important}
+            #print-area{display:block!important;width:100%;box-sizing:border-box;page-break-after:avoid;page-break-inside:avoid}
+            .print-header-top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--qb);padding-bottom:6px;margin-bottom:8px}
+            .print-header-top img{height:28px}.print-doc-no{font-size:9px;color:#555}
+            .print-title{text-align:center;font-size:16px;font-weight:bold;margin-bottom:4px;line-height:1.4}
+            .print-subtitle{text-align:center;font-size:9.5px;color:#64748b;margin:0 0 8px 0}
+            .print-overview{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;background:#f8fafc!important;border:1px solid #94a3b8!important;border-radius:4px;padding:8px 12px;margin-bottom:10px;font-size:10px}
+            .print-overview .label{font-weight:bold;color:var(--qb);margin-right:4px}
+            .tm-table{width:100%;border-collapse:collapse;font-size:9.5px;table-layout:fixed;border:1.5px solid #1e293b!important}
+            .tm-table th{border:1px solid #1e293b!important;background:#f8fafc!important;font-weight:bold;text-align:center;padding:7px 5px!important;font-size:10px}
+            .tm-table td{border:1px solid #1e293b!important;padding:9px 8px!important;vertical-align:top;word-break:keep-all;line-height:1.4;font-size:9.5px}
+            .tm-table tbody tr{page-break-inside:avoid;break-inside:avoid}
+            .tm-col-date{width:12%;text-align:center;font-weight:700;background:#f8fafc!important;vertical-align:middle;font-size:9px;line-height:1.45}
+            .tm-col-desc{width:71%}.tm-col-meal{width:17%;text-align:center;vertical-align:middle}
+            .tm-day-divider td{border-top:1.5px solid #1e293b!important}
+            .tm-time-flow{font-size:9.5px!important;margin-bottom:5px!important;font-weight:bold}
+            .tm-time-tag{color:var(--qb);margin-right:4px}.tm-highlight{font-weight:700;color:#000}
+            .tm-desc-list{list-style:none;margin:3px 0!important;padding-left:4px}
+            .tm-desc-list li{position:relative;padding-left:11px;margin-bottom:3px!important;line-height:1.4;font-size:9.5px}
+            .tm-desc-list li::before{content:'■';font-size:6px;position:absolute;left:0;top:4px;color:var(--qb)}
+            .tm-hotel-divider{border:0;border-top:1px dashed #94a3b8;margin:6px 0 4px 0}
+            .tm-hotel-info{font-size:9px!important;font-weight:bold}
+            .tm-meal-wrapper{display:flex;flex-direction:column;gap:5px;justify-content:flex-start;text-align:left;padding-left:4px;padding-top:2px}
+            .tm-meal-simple{display:flex;align-items:flex-start;font-size:9px!important;line-height:1.35}
+            .tm-meal-simple strong{color:var(--qb);margin-right:4px;width:16px;flex-shrink:0}
+            .print-disclaimer{padding:7px 10px;background:#fffbeb!important;border:1px solid #fcd34d!important;border-radius:4px;font-size:9px;color:#92400e;text-align:center;line-height:1.45;margin-bottom:6px}
+            .print-contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;padding:8px 10px;background:#f8fafc!important;border:1px solid #cbd5e1!important;border-radius:4px;font-size:9.5px;margin-bottom:8px}
+            .print-contacts .pc-role{font-weight:700;color:var(--qb);margin-right:3px}
+            .print-credit{margin-top:6px;padding:7px 10px;border-top:1px solid #cbd5e1;text-align:center}
+            .print-credit-badge{font-size:8px;font-weight:800;color:var(--qb);letter-spacing:.03em;margin-bottom:3px}
+            .print-credit-text{font-size:8.5px;color:#475569;line-height:1.45}
+            .print-footer-area{display:flex;justify-content:space-between;align-items:flex-end;font-size:8px;padding-top:4px;color:#94a3b8}
+        }
+    </style>
+</head>
+<body class="antialiased pb-20 md:pb-0 relative">
+    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 no-print">
+        <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 shrink-0">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjPMO83G1xHJIu1jKvn1GjQn_C3z42tM-LYvYPKcGIaYkarv47vw5TlYsJFjZxRLVm4e0yQutvIHXQ_VBUHdlu2p25QP7z1NAK2XsEUNUpxycDMpLzi7TJ390gXDpD5orf1OBAXwbwnPrasas06glRIv9rpqwN1YEQvy2fPbKRU4Ogpbo8SyH7NEnt-1FY=w320-h101" alt="큐비글로벌 QB Global" class="h-8">
+                <span id="d-day-badge" class="bg-[#0284c7] text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm animate-pulse">D-Day</span>
+            </div>
+            <div class="flex-1 overflow-x-auto no-scrollbar ml-4 md:ml-8">
+                <div class="flex items-center space-x-1 md:space-x-3 whitespace-nowrap pr-4 text-sm">
+                    <a href="#home" class="px-3 py-2 font-bold text-slate-600 hover:text-[#0284c7] rounded-lg">홈</a>
+                    <a href="#highlights" class="px-3 py-2 font-bold text-[#0284c7] rounded-lg">핵심포인트</a>
+                    <a href="#flight" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">항공</a>
+                    <a href="#map-section" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">여행동선</a>
+                    <a href="#schedule" class="px-3 py-2 font-bold text-[#0284c7] rounded-lg">상세일정</a>
+                    <a href="#temasek" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">협력학교</a>
+                    <a href="#hotel" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">숙소</a>
+                    <a href="#smart-info" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">스마트정보</a>
+                    <a href="#check" class="px-3 py-2 font-medium text-slate-600 hover:text-[#0284c7] rounded-lg">준비물</a>
+                    <a href="#contact" class="px-3 py-2 font-bold text-red-600 rounded-lg">비상연락</a>
+                </div>
+            </div>
+            <button onclick="shareLink()" class="shrink-0 p-2 text-slate-500 hover:text-[#0284c7]" title="공유"><i class="fa-solid fa-share-nodes text-xl"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-bg min-h-[70vh] flex items-center justify-center text-center px-4 relative">
+            <div class="animate-fade-in-up text-white z-10 w-full max-w-5xl">
+                <span class="bg-[#0284c7]/90 px-5 py-2 rounded-full text-sm font-bold mb-6 inline-block border border-white/20">🇮🇩 2026 인도네시아 반둥 국제교류·체험</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg font-[Nanum Myeongjo]">
+                    세계와 연결되는<br><span class="text-cyan-200">반둥 · 자카르타</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-100 font-medium bg-black/40 inline-block px-5 py-2 rounded-xl mt-4 backdrop-blur-sm border border-white/10" id="hero-date">
+                    2026.8.9(일) ~ 8.13(목) · 3박 5일 · 학생 5명 + 인솔 1명 + 교장 (총 7명)
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm md:text-base font-bold">
+                    <div class="bg-white/20 px-4 py-3 rounded-xl backdrop-blur-sm">🏫 고달초등학교 (전남 곡성)</div>
+                    <div class="bg-white/20 px-4 py-3 rounded-xl backdrop-blur-sm">✈️ 티웨이항공 ICN↔자카르타</div>
+                    <div class="bg-white/20 px-4 py-3 rounded-xl backdrop-blur-sm">🏨 Holiday Inn Pasteur</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights" class="py-16 bg-white -mt-10 rounded-t-3xl relative z-20 shadow-[0_-10px_30px_rgba(0,0,0,0.08)]">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <span class="text-[#0284c7] font-black tracking-widest text-xs uppercase bg-sky-50 px-3 py-1 rounded-full">PROGRAM HIGHLIGHTS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mt-4">고달초등학교만을 위한 핵심 프로그램</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-sky-50 p-8 rounded-3xl border border-sky-100 shadow-sm hover:-translate-y-1 transition-transform ring-2 ring-[#0284c7]/20">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <span class="text-[10px] font-black bg-[#0284c7] text-white px-2 py-0.5 rounded">최우선</span>
+                        <h3 class="text-xl font-bold text-sky-900 mb-3 mt-2">Temasek 학교 국제교류</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">인도네시아 <strong>Temasek Independent School</strong>과 2일간 버디 수업을 통해 영어·문화 교류를 경험합니다. 현지 학생과 함께하는 수업은 이번 여행의 가장 소중한 학습 시간입니다.</p>
+                    </div>
+                    <div class="bg-cyan-50 p-8 rounded-3xl border border-cyan-100 shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="text-4xl mb-4">🌋</div>
+                        <h3 class="text-xl font-bold text-cyan-900 mb-3">반둥 문화·자연 체험</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed"><strong>땅꾸반 뿌르후</strong> 화산, <strong>Trans Studio</strong> 테마파크, <strong>사웅 앙클룽 우조</strong> 공연 등 인도네시아의 자연과 문화를 직접 체험합니다.</p>
+                    </div>
+                    <div class="bg-emerald-50 p-8 rounded-3xl border border-emerald-100 shadow-sm hover:-translate-y-1 transition-transform">
+                        <div class="text-4xl mb-4">🛡️</div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-3">안전 밀착 운영</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">소규모 7명 맞춤 일정으로 인솔 교사·교장님과 함께 전 일정을 안전하게 진행합니다. 큐비글로벌(QB Global) 현지 지원 체계로 학부모님께 안심을 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="flight" class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10">
+                    <span class="text-[#0284c7] font-black tracking-widest text-xs uppercase"><i class="fa-solid fa-plane"></i> FLIGHT INFO</span>
+                    <h2 class="text-3xl font-bold text-slate-800 mt-2">항공 및 이동 안내</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center text-[#0284c7] text-xl"><i class="fa-solid fa-plane-departure"></i></div>
+                            <div><p class="text-xs text-slate-400 font-bold">출국 · 8/9(일)</p><h3 class="font-bold text-lg">인천 → 자카르타</h3></div>
+                        </div>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li><strong class="text-[#0284c7]">항공사</strong> 티웨이항공 (T'way Air)</li>
+                            <li><strong class="text-[#0284c7]">출발</strong> 15:10 인천국제공항(ICN)</li>
+                            <li><strong class="text-[#0284c7]">도착</strong> 20:10 자카르타(CGK)</li>
+                            <li><strong class="text-[#0284c7]">이후</strong> 반둥 이동 (약 3시간 · 8/10 새벽 도착)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center text-[#0284c7] text-xl"><i class="fa-solid fa-plane-arrival"></i></div>
+                            <div><p class="text-xs text-slate-400 font-bold">귀국 · 8/12(수)~8/13(목)</p><h3 class="font-bold text-lg">자카르타 → 인천</h3></div>
+                        </div>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li><strong class="text-[#0284c7]">항공사</strong> 티웨이항공 (T'way Air)</li>
+                            <li><strong class="text-[#0284c7]">출발</strong> 21:50 자카르타(CGK) · 8/12(수)</li>
+                            <li><strong class="text-[#0284c7]">도착</strong> 07:10 인천국제공항 · 8/13(목)</li>
+                            <li><strong class="text-[#0284c7]">귀교</strong> 공항버스·KTX 경유 12:15 곡성역 도착</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 bg-sky-50 border border-sky-100 rounded-2xl p-6 text-sm text-slate-600">
+                    <p class="font-bold text-[#0284c7] mb-2"><i class="fa-solid fa-train mr-1"></i> 1일차·5일차 국내 이동</p>
+                    <p>곡성역 08:35 KTX → 광명 10:41 · 공항버스 11:20 → 인천공항 12:20 / 귀국 시 공항버스 08:45 광명 → KTX 10:11 곡성 → 12:15 곡성역 도착</p>
+                </div>
+            </div>
+        </section>
+        <section id="map-section" class="py-16 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800">여행 동선 지도</h2>
+                    <p class="text-sm text-slate-500 mt-2">곡성 → 인천 → 자카르타 → 반둥 현지 프로그램</p>
+                </div>
+                <div class="flex flex-wrap gap-2 justify-center mb-6">
+                    <button onclick="changeMapAndTab('all')" class="map-tab-btn active px-4 py-2 rounded-full text-sm font-bold border bg-[#0284c7] text-white border-[#0284c7] shadow-sm">전체</button>
+                    <button onclick="changeMapAndTab('day1')" class="map-tab-btn px-4 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">DAY1 출국</button>
+                    <button onclick="changeMapAndTab('day2')" class="map-tab-btn px-4 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">DAY2 반둥</button>
+                    <button onclick="changeMapAndTab('day3')" class="map-tab-btn px-4 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">DAY3 학교</button>
+                    <button onclick="changeMapAndTab('day4')" class="map-tab-btn px-4 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">DAY4 귀국</button>
+                    <button onclick="changeMapAndTab('day5')" class="map-tab-btn px-4 py-2 rounded-full text-sm font-bold border bg-white text-slate-600 border-slate-300">DAY5 귀교</button>
+                </div>
+                <div id="map"></div>
+                <p class="text-center text-xs text-slate-400 mt-4">※ 교통·현지 상황에 따라 순서 및 시간이 변동될 수 있습니다.</p>
+            </div>
+        </section>
+
+        <section id="schedule" class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <h2 class="text-3xl font-bold text-slate-800">상세 일정표</h2>
+                        <button onclick="printSchedule()" class="no-print shrink-0 flex items-center gap-2 px-4 py-2 bg-[#0284c7] hover:bg-sky-700 text-white text-sm font-bold rounded-xl shadow-md transition-colors">
+                            <i class="fa-solid fa-print"></i> 일정표 인쇄하기
+                        </button>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-2">고달초등학교 예정 일정 · 세부 시간은 현지 조율 후 안내</p>
+                </div>
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="flex flex-wrap border-b bg-slate-50 overflow-x-auto no-scrollbar">
+                        <button onclick="changeMapAndTab('day1')" class="sched-tab flex-1 min-w-[100px] py-4 font-bold text-sm text-[#0284c7] border-b-2 border-[#0284c7]">DAY1 (8/9)</button>
+                        <button onclick="changeMapAndTab('day2')" class="sched-tab flex-1 min-w-[100px] py-4 font-bold text-sm text-slate-500 hover:text-[#0284c7]">DAY2 (8/10)</button>
+                        <button onclick="changeMapAndTab('day3')" class="sched-tab flex-1 min-w-[100px] py-4 font-bold text-sm text-slate-500 hover:text-[#0284c7]">DAY3 (8/11)</button>
+                        <button onclick="changeMapAndTab('day4')" class="sched-tab flex-1 min-w-[100px] py-4 font-bold text-sm text-slate-500 hover:text-[#0284c7]">DAY4 (8/12)</button>
+                        <button onclick="changeMapAndTab('day5')" class="sched-tab flex-1 min-w-[100px] py-4 font-bold text-sm text-slate-500 hover:text-[#0284c7]">DAY5 (8/13)</button>
+                    </div>
+
+                    <div id="day1" class="schedule-content p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-8 border-b pb-4">
+                            <div class="bg-[#0284c7] text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0">1일</div>
+                            <div>
+                                <h3 class="font-bold text-xl">8.9(일) 곡성 출발 → 인천 → 자카르타</h3>
+                                <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded border mt-2 inline-block">중: 공항 · 석: 기내·현지</span>
+                            </div>
+                        </div>
+                        <div class="relative border-l-2 border-slate-300 ml-4 pl-6 space-y-6">
+                            <div class="relative"><div class="timeline-dot bg-slate-400 ring-slate-100"></div><h4 class="font-bold">08:35 곡성역 KTX 출발</h4><p class="text-sm text-slate-500 mt-1">광명 10:41 도착</p></div>
+                            <div class="relative"><div class="timeline-dot bg-sky-500 ring-sky-100"></div><h4 class="font-bold">11:20 공항버스 탑승 → 12:20 인천공항 도착</h4><p class="text-sm text-slate-500 mt-1">체크인 및 출국 수속</p></div>
+                            <div class="relative"><div class="timeline-dot bg-orange-500 ring-orange-100"></div><h4 class="font-bold">공항 중식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-[#0284c7] ring-sky-100"></div><h4 class="font-bold">15:10 ICN 출발 · 티웨이항공</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-indigo-600 ring-indigo-100"></div><h4 class="font-bold">20:10 자카르타(CGK) 도착</h4><p class="text-sm text-slate-500 mt-1">기내·현지 석식 후 반둥 방향 이동</p></div>
+                        </div>
+                    </div>
+
+                    <div id="day2" class="schedule-content hidden p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-8 border-b pb-4">
+                            <div class="bg-cyan-600 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0">2일</div>
+                            <div>
+                                <h3 class="font-bold text-xl">8.10(월) 반둥 도착 · 문화·테마 체험</h3>
+                                <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded border mt-2 inline-block">조: 호텔 · 중: Rasa Lasa · 석: Wheel's Restaurant</span>
+                            </div>
+                        </div>
+                        <div class="relative border-l-2 border-slate-300 ml-4 pl-6 space-y-6">
+                            <div class="relative"><div class="timeline-dot bg-indigo-600 ring-indigo-100"></div><h4 class="font-bold">01:00 반둥 도착 · Holiday Inn Pasteur 체크인</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-slate-400 ring-slate-100"></div><h4 class="font-bold">09:00 호텔 조식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-emerald-600 ring-emerald-100"></div>
+                                <div class="schedule-media"><div class="schedule-desc"><h4 class="font-bold">10:30 땅꾸반 뿌르후 (Tangkuban Perahu)</h4><p class="text-sm text-slate-500 mt-1">반둥 북쪽 활화산 분화구·크레이터를 둘러보는 자연 체험</p></div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Tangkuban_Parahu%2C_Bandung%2C_West_Java%2C_Indonesia.JPG/640px-Tangkuban_Parahu%2C_Bandung%2C_West_Java%2C_Indonesia.JPG" alt="땅꾸반 뿌르후" class="schedule-thumb"></div></div>
+                            <div class="relative"><div class="timeline-dot bg-orange-500 ring-orange-100"></div><h4 class="font-bold">14:00 Rasa Lasa 중식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-pink-600 ring-pink-100"></div>
+                                <div class="schedule-media"><div class="schedule-desc"><h4 class="font-bold">15:00 Trans Studio Bandung</h4><p class="text-sm text-slate-500 mt-1">인도네시아 대표 실내 테마파크·놀이시설 체험</p></div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Trans_Studio_Mall_Bandung%2C_Indonesia.jpg/640px-Trans_Studio_Mall_Bandung%2C_Indonesia.jpg" alt="Trans Studio Bandung" class="schedule-thumb"></div></div>
+                            <div class="relative"><div class="timeline-dot bg-red-500 ring-red-100"></div><h4 class="font-bold">18:00 Wheel's Restaurant 석식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-slate-800 ring-slate-200"></div><h4 class="font-bold">20:00 호텔 복귀</h4></div>
+                        </div>
+                    </div>
+
+                    <div id="day3" class="schedule-content hidden p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-8 border-b pb-4">
+                            <div class="bg-[#0284c7] text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0">3일</div>
+                            <div>
+                                <h3 class="font-bold text-xl">8.11(화) Temasek 학교 버디 수업 · 앙클룽</h3>
+                                <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded border mt-2 inline-block">조: 호텔 · 중: 도시락(한식) · 석: Hachi Grill</span>
+                            </div>
+                        </div>
+                        <div class="relative border-l-2 border-slate-300 ml-4 pl-6 space-y-6">
+                            <div class="relative"><div class="timeline-dot bg-slate-400 ring-slate-100"></div><h4 class="font-bold">06:00 조식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-[#0284c7] ring-sky-100"></div><h4 class="font-bold">07:30 Temasek Independent School 버디 수업</h4><p class="text-sm text-slate-500 mt-1">현지 학생과 함께하는 국제교류 수업 · 중식 도시락(한식)</p></div>
+                            <div class="relative"><div class="timeline-dot bg-amber-500 ring-amber-100"></div><h4 class="font-bold">12:15 마트 미션 · Griya Pasteur</h4><p class="text-sm text-slate-500 mt-1">현지 마트에서 영어·인도네시아어 활용 체험</p></div>
+                            <div class="relative"><div class="timeline-dot bg-violet-600 ring-violet-100"></div>
+                                <div class="schedule-media"><div class="schedule-desc"><h4 class="font-bold">15:30 사웅 앙클룽 우조 (Saung Angklung Udjo) 공연</h4><p class="text-sm text-slate-500 mt-1">전통 앙클룽 악기 공연·체험 — 유네스코 무형문화유산</p></div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Angklung_2008.jpg/640px-Angklung_2008.jpg" alt="앙클룽 공연" class="schedule-thumb"></div></div>
+                            <div class="relative"><div class="timeline-dot bg-red-500 ring-red-100"></div><h4 class="font-bold">18:00 Hachi Grill 석식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-slate-800 ring-slate-200"></div><h4 class="font-bold">19:30 호텔 복귀</h4></div>
+                        </div>
+                    </div>
+
+                    <div id="day4" class="schedule-content hidden p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-8 border-b pb-4">
+                            <div class="bg-teal-600 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0">4일</div>
+                            <div>
+                                <h3 class="font-bold text-xl">8.12(수) Temasek 수업 · 자카르타 출국</h3>
+                                <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded border mt-2 inline-block">조: 호텔 · 중: Hara Cafe · 석: 공항</span>
+                            </div>
+                        </div>
+                        <div class="relative border-l-2 border-slate-300 ml-4 pl-6 space-y-6">
+                            <div class="relative"><div class="timeline-dot bg-slate-400 ring-slate-100"></div><h4 class="font-bold">06:00 조식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-[#0284c7] ring-sky-100"></div><h4 class="font-bold">07:30 Temasek Independent School 버디 수업</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-orange-500 ring-orange-100"></div><h4 class="font-bold">11:45 Hara Cafe 중식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-pink-500 ring-pink-100"></div><h4 class="font-bold">13:00 PVJ (Paris Van Java) 쇼핑</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-slate-500 ring-slate-100"></div><h4 class="font-bold">14:30 자카르타 공항(CGK) 이동</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-indigo-600 ring-indigo-100"></div><h4 class="font-bold">18:00 공항 체크인 · 석식</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-[#0284c7] ring-sky-100"></div><h4 class="font-bold">21:50 자카르타 출발 → 인천</h4></div>
+                        </div>
+                    </div>
+
+                    <div id="day5" class="schedule-content hidden p-6 md:p-8">
+                        <div class="flex items-center gap-4 mb-8 border-b pb-4">
+                            <div class="bg-green-600 text-white text-xl font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0">5일</div>
+                            <div>
+                                <h3 class="font-bold text-xl">8.13(목) 인천 도착 → 곡성 귀교</h3>
+                            </div>
+                        </div>
+                        <div class="relative border-l-2 border-slate-300 ml-4 pl-6 space-y-6">
+                            <div class="relative"><div class="timeline-dot bg-[#0284c7] ring-sky-100"></div><h4 class="font-bold">07:10 인천국제공항 도착</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-sky-500 ring-sky-100"></div><h4 class="font-bold">08:45 공항버스 → 광명</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-slate-500 ring-slate-100"></div><h4 class="font-bold">10:11 KTX 곡성 방향</h4></div>
+                            <div class="relative"><div class="timeline-dot bg-green-600 ring-green-100"></div><h4 class="font-bold">12:15 곡성역 도착 · 해산</h4><p class="text-sm text-slate-500 mt-1">안전 귀가</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="temasek" class="py-16 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10">
+                    <span class="text-[#0284c7] font-black tracking-widest text-xs uppercase">PARTNER SCHOOL</span>
+                    <h2 class="text-3xl font-bold text-slate-800 mt-2">Temasek Independent School</h2>
+                    <p class="text-sm text-slate-500 mt-2">인도네시아 반둥 소재 국제학교 · 2일간 버디 프로그램</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-sky-50 p-8 rounded-3xl border border-sky-100">
+                        <h3 class="text-xl font-bold text-sky-900 mb-4">학교 소개</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">Temasek Independent School은 반둥에서 영어·인도네시아어를 함께 사용하는 국제 교육 기관입니다. 이번 프로그램에서는 고달초등학교 5·6학년 학생들이 현지 학생과 짝(버디)을 이루어 수업에 참여하며, 언어·문화 교류를 통해 글로벌 시민 의식을 키웁니다.</p>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li>✅ 영어·인도네시아어 기반 국제교류 수업</li>
+                            <li>✅ 현지 학생과 1:1 또는 소그룹 버디 활동</li>
+                            <li>✅ 8/11(화), 8/12(수) 2일간 진행</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden shadow-lg border">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/640px-Gedung_Sate_Bandung.jpg" alt="반둥 도시" class="w-full h-64 object-cover">
+                        <div class="bg-[#0284c7] text-white p-4 text-sm font-medium text-center">반둥 · 인도네시아 서자바 문화·교육의 중심</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hotel" class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-slate-800">숙박 안내 (3박)</h2>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border shadow-sm max-w-2xl mx-auto">
+                    <span class="text-xs font-bold bg-sky-100 text-[#0284c7] px-2 py-1 rounded">8/10~8/12 · 3박</span>
+                    <h3 class="text-2xl font-bold mt-3 mb-2">Holiday Inn Bandung Pasteur</h3>
+                    <p class="text-sm text-slate-500 mb-4">Jl. Pasteur No. 28, Bandung, West Java</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bandung_view_from_Gedung_Sate.jpg/640px-Bandung_view_from_Gedung_Sate.jpg" alt="반둥 전경" class="rounded-xl w-full h-48 object-cover my-4">
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li>✅ 반둥 Pasteur 지역 · Temasek 학교·PVJ 접근 편리</li>
+                        <li>✅ 조식 포함 · 7명 소규모 맞춤 배정</li>
+                        <li>✅ 문화체험·학교교류·쇼핑 일정 중심 거점</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="smart-info" class="py-16 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <span class="text-[#0284c7] font-black tracking-widest text-xs uppercase">SMART INFO</span>
+                    <h2 class="text-3xl font-bold text-slate-800 mt-2">스마트 여행 정보</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm lg:col-span-1">
+                        <h3 class="font-bold text-slate-800 mb-4"><i class="fa-solid fa-cloud-sun text-yellow-500 mr-1"></i> 반둥·자카르타 날씨</h3>
+                        <p class="text-xs font-bold text-[#0284c7] mb-2"><i class="fa-solid fa-location-dot mr-1"></i>반둥</p>
+                        <div id="weather-bandung" class="flex overflow-x-auto no-scrollbar gap-2 bg-slate-50 p-3 rounded-xl border mb-4"><p class="text-xs text-slate-400 p-2">불러오는 중...</p></div>
+                        <p class="text-xs font-bold text-cyan-600 mb-2"><i class="fa-solid fa-location-dot mr-1"></i>자카르타</p>
+                        <div id="weather-jakarta" class="flex overflow-x-auto no-scrollbar gap-2 bg-slate-50 p-3 rounded-xl border"><p class="text-xs text-slate-400 p-2">불러오는 중...</p></div>
+                        <p class="text-[11px] text-slate-500 mt-3">💡 8월 건기 · 얇은 겉옷·우산·자외선 차단 준비</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-4"><i class="fa-solid fa-coins text-amber-500 mr-1"></i> IDR 환율 계산기</h3>
+                        <div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-4">
+                            <div class="relative flex-1">
+                                <input type="number" id="idr-input" placeholder="루피아 입력" oninput="calcKRW()" class="w-full bg-slate-50 border border-slate-200 text-sm font-bold rounded-lg px-2 py-2 text-right focus:ring-1 focus:ring-[#0284c7] outline-none">
+                                <span class="absolute left-2 top-2 text-slate-400 text-xs">Rp</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-slate-300 text-xs"></i>
+                            <div class="flex-1 bg-sky-50 text-[#0284c7] font-bold rounded-lg px-2 py-2 text-right text-sm"><span id="krw-output">0</span> 원</div>
+                        </div>
+                        <p class="text-[9px] text-slate-400 text-right mb-2">※ 송금 수수료 1.5% 반영 기준</p>
+                        <div id="price-list" class="space-y-2 text-xs"></div>
+                    </div>
+                    <div class="bg-[#0284c7] rounded-3xl p-6 text-white shadow-lg flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2"><i class="fa-solid fa-language text-sky-200 mr-1"></i> 초등생 회화판</h3>
+                            <p class="text-sky-100 text-xs leading-relaxed mb-6">영어·인도네시아어 간단 표현을 버튼 하나로! 현지에서 이 화면을 보여주세요.</p>
+                        </div>
+                        <button onclick="openPhraseModal()" class="w-full bg-white text-[#0284c7] font-bold py-3 rounded-xl shadow-md hover:bg-sky-50 transition-colors">스마트 회화판 열기 <i class="fa-solid fa-arrow-pointer ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="check" class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-10"><h2 class="text-3xl font-bold text-slate-800">준비물 체크리스트</h2></div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border shadow-sm">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-bold text-xl"><i class="fa-solid fa-check-double text-[#0284c7] mr-2"></i>필수 준비물</h3>
+                            <button onclick="promptResetChecklist()" class="text-xs text-slate-400 hover:text-red-500 underline">초기화</button>
+                        </div>
+                        <div id="checklist-container" class="space-y-3"></div>
+                    </div>
+                    <div class="bg-yellow-50 p-8 rounded-3xl border border-yellow-200 flex flex-col">
+                        <h3 class="font-bold text-xl mb-6 text-yellow-800"><i class="fa-solid fa-pen-clip mr-2"></i>나만의 여행 메모</h3>
+                        <textarea id="travel-memo" class="flex-1 w-full min-h-[250px] bg-white p-5 rounded-2xl border border-yellow-300 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Temasek 학교에서 배운 것, 앙클룽 공연 소감, 친구와의 약속 등을 적어보세요."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-red-50 border-t border-red-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-slate-800">비상 연락망</h2>
+                    <p class="text-sm text-slate-600 mt-2">긴급 상황 시 아래 연락처로 문의해 주세요.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 text-white p-8 rounded-3xl shadow-md">
+                        <h4 class="font-bold text-xl mb-2">큐비글로벌 (QB Global) 상황실</h4>
+                        <p class="text-xs text-slate-400 mb-5">여행 운영·현지 지원</p>
+                        <div class="space-y-3">
+                            <div class="contact-row"><span class="contact-badge">담당</span><div><p class="font-bold">김회란</p><p class="text-sm text-slate-300">010-3453-0584</p></div></div>
+                            <div class="contact-row"><span class="contact-badge">담당</span><div><p class="font-bold">최민태</p><p class="text-sm text-slate-300">010-7369-5230</p></div></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-red-100 shadow-md">
+                        <h4 class="font-bold text-xl text-red-800 mb-4"><i class="fa-solid fa-building-columns mr-2"></i>주자카르타 대한민국 대사관</h4>
+                        <p class="text-sm text-slate-600 mb-2">Jl. Jenderal Gatot Subroto Kav. 57, Jakarta</p>
+                        <p class="text-sm font-bold text-slate-800">대표 ☎ +62-21-520-1915</p>
+                        <p class="text-sm font-bold text-red-600 mt-2">긴급 ☎ +62-811-943-653 (24시간)</p>
+                        <p class="text-xs text-slate-400 mt-4 pt-4 border-t">경찰 110 · 응급 119 (한국) / Polisi 110 · Ambulans 118 (인도네시아)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="esg" class="py-16 bg-emerald-800 text-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="md:w-5/12 text-center md:text-left">
+                        <span class="inline-block bg-emerald-700 text-emerald-100 text-xs px-3 py-1 rounded-full font-bold mb-4 border border-emerald-600"><i class="fa-solid fa-leaf mr-1"></i> Paperless DX</span>
+                        <h2 class="text-3xl font-bold mb-4">종이 없는 스마트 가이드북</h2>
+                        <p class="text-emerald-200 text-sm leading-relaxed">고달초등학교는 종이 일정표 대신 본 디지털 가이드북을 활용하여 친환경 여행 문화를 실천합니다.</p>
+                    </div>
+                    <div class="md:w-7/12 grid grid-cols-3 gap-4 w-full">
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 text-center">
+                            <p class="text-emerald-100 text-xs font-bold mb-1">종이 절감</p>
+                            <p class="text-3xl font-black">56<span class="text-sm">장</span></p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 text-center">
+                            <p class="text-emerald-100 text-xs font-bold mb-1">탄소 감소</p>
+                            <p class="text-3xl font-black">38<span class="text-sm">g</span></p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 text-center">
+                            <p class="text-emerald-100 text-xs font-bold mb-1">물 절약</p>
+                            <p class="text-3xl font-black">75<span class="text-sm">L</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-emerald-100/80 text-xs mt-8 max-w-lg mx-auto">본 스마트 가이드북은 <strong class="text-white">고달초등학교</strong>의 기획과 큐비글로벌(QB Global)의 트래블 테크 기술 제휴로 제작되었습니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-100 py-10 text-center no-print border-t px-4">
+        <div class="qb-credit">
+            <p class="qb-credit-badge">[System Powered by QB GLOBAL]</p>
+            <p class="qb-credit-text">본 스마트 가이드북은 <strong>고달초등학교</strong>의 기획과 <strong>큐비글로벌(QB Global)</strong>의 트래블 테크 기술 제휴로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-full shadow-2xl z-[9999] transition-all duration-300 translate-y-20 opacity-0 no-print pointer-events-none">
+        <i class="fa-solid fa-circle-check text-green-400"></i> <span id="toast-msg"></span>
+    </div>
+
+    <div id="custom-confirm" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/60 backdrop-blur-sm px-4 no-print">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center">
+            <h3 class="text-xl font-bold mb-2">초기화 확인</h3>
+            <p class="text-slate-600 text-sm mb-6">체크리스트를 초기화하시겠습니까?</p>
+            <div class="flex gap-3">
+                <button onclick="closeConfirmModal()" class="flex-1 bg-slate-100 py-3 rounded-xl font-bold">취소</button>
+                <button onclick="executeResetChecklist()" class="flex-1 bg-red-600 text-white py-3 rounded-xl font-bold">초기화</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="phrase-modal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-end bg-black/80 backdrop-blur-sm sm:justify-center px-4 no-print">
+        <div class="bg-white w-full max-w-md rounded-t-3xl sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
+            <div class="bg-[#0284c7] p-4 text-white flex justify-between items-center shrink-0">
+                <h3 class="font-bold"><i class="fa-solid fa-language mr-2"></i> 초등생 영어·인도네시아어</h3>
+                <button onclick="closePhraseModal()" class="text-white/80 hover:text-white p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-4 bg-slate-50 grid grid-cols-2 gap-2 overflow-y-auto no-scrollbar">
+                <button onclick="showPhrase('🙋','안녕하세요','Hello / Halo','Hello / Halo')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🙋</span><span class="text-xs font-bold">인사</span></button>
+                <button onclick="showPhrase('🛍️','얼마예요?','How much? / Berapa harganya?','How much? / Berapa harganya?')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🛍️</span><span class="text-xs font-bold">가격</span></button>
+                <button onclick="showPhrase('🍦','이거 주세요','Please / Tolong','Please / Tolong')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🍦</span><span class="text-xs font-bold">주문</span></button>
+                <button onclick="showPhrase('🚽','화장실 어디?','Where is the toilet? / Di mana toilet?','Where is the toilet? / Di mana toilet?')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🚽</span><span class="text-xs font-bold">화장실</span></button>
+                <button onclick="showPhrase('🙏','감사합니다','Thank you / Terima kasih','Thank you / Terima kasih')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🙏</span><span class="text-xs font-bold">감사</span></button>
+                <button onclick="showPhrase('📸','사진 찍어주세요','Photo please / Foto please','Photo please / Foto please')" class="bg-white p-3 rounded-xl border shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">📸</span><span class="text-xs font-bold">사진</span></button>
+                <button onclick="showPhrase('🆘','길을 잃었어요','I am lost / Saya tersesat','I am lost / Saya tersesat')" class="bg-white p-3 rounded-xl border border-red-200 shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🆘</span><span class="text-xs font-bold text-red-600">길 잃음</span></button>
+                <button onclick="showPhrase('🤕','아파요','I am sick / Saya sakit','I am sick / Saya sakit')" class="bg-white p-3 rounded-xl border border-red-200 shadow-sm flex flex-col items-center gap-1"><span class="text-2xl">🤕</span><span class="text-xs font-bold text-red-600">아플 때</span></button>
+            </div>
+            <div id="phrase-display" class="hidden flex-col items-center p-6 bg-white border-t-2 border-sky-50 shrink-0">
+                <span id="p-emoji" class="text-5xl mb-2"></span>
+                <p id="p-kr-meaning" class="text-sm text-slate-500 font-bold mb-1"></p>
+                <div class="bg-sky-50 border border-sky-100 p-4 rounded-2xl w-full text-center mb-3"><p id="p-local" class="text-xl font-black text-[#0284c7]"></p></div>
+                <p class="text-xs text-pink-600 font-bold animate-pulse"><i class="fa-solid fa-mobile-screen mr-1"></i>어른에게 이 화면을 보여주세요</p>
+            </div>
+        </div>
+    </div>
+    <div id="print-area">
+        <div class="print-header-top">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjPMO83G1xHJIu1jKvn1GjQn_C3z42tM-LYvYPKcGIaYkarv47vw5TlYsJFjZxRLVm4e0yQutvIHXQ_VBUHdlu2p25QP7z1NAK2XsEUNUpxycDMpLzi7TJ390gXDpD5orf1OBAXwbwnPrasas06glRIv9rpqwN1YEQvy2fPbKRU4Ogpbo8SyH7NEnt-1FY=w320-h101" alt="QB Global">
+            <div class="print-doc-no">문서번호: QB-260809-GODAL</div>
+        </div>
+        <div class="print-title">고달초등학교 2026 인도네시아 반둥 Temasek Independent School 국제교류·체험 예정 일정표</div>
+        <p class="print-subtitle">※ 예정 일정표 · 현지 사정에 따라 일정이 변동될 수 있습니다</p>
+        <div class="print-overview">
+            <div><span class="label">기간</span> 2026.8.9(일)~8.13(목) 3박5일</div>
+            <div><span class="label">인원</span> 7명 (학생5+인솔1+교장)</div>
+            <div><span class="label">항공</span> 티웨이항공 ICN↔CGK</div>
+            <div><span class="label">숙소</span> Holiday Inn Pasteur</div>
+        </div>
+        <table class="tm-table">
+            <thead><tr><th class="tm-col-date">일자</th><th class="tm-col-desc">상세 일정</th><th class="tm-col-meal">식사</th></tr></thead>
+            <tbody>
+                <tr class="tm-day-divider">
+                    <td class="tm-col-date">제1일<br>8/9(일)<br>출국</td>
+                    <td class="tm-col-desc">
+                        <div class="tm-time-flow"><span class="tm-time-tag">오전</span> 곡성 → 인천</div>
+                        <ul class="tm-desc-list">
+                            <li>08:35 곡성역 KTX → 광명 10:41</li>
+                            <li>11:20 공항버스 → 12:20 인천공항 체크인</li>
+                            <li>15:10 ICN 출발 (티웨이항공)</li>
+                            <li>20:10 자카르타 도착 · 반둥 이동</li>
+                        </ul>
+                    </td>
+                    <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>중:</strong> 공항</div><div class="tm-meal-simple"><strong>석:</strong> 기내·현지</div></div></td>
+                </tr>
+                <tr class="tm-day-divider">
+                    <td class="tm-col-date">제2일<br>8/10(월)<br>반둥</td>
+                    <td class="tm-col-desc">
+                        <div class="tm-time-flow"><span class="tm-time-tag">종일</span> 반둥 문화·테마 체험</div>
+                        <ul class="tm-desc-list">
+                            <li>01:00 반둥 도착 · Holiday Inn 체크인</li>
+                            <li>09:00 조식</li>
+                            <li><span class="tm-highlight">땅꾸반 뿌르후</span> (10:30)</li>
+                            <li>14:00 Rasa Lasa 중식</li>
+                            <li><span class="tm-highlight">Trans Studio</span> (15:00)</li>
+                            <li>18:00 Wheel's Restaurant 석식 · 20:00 호텔</li>
+                        </ul>
+                        <hr class="tm-hotel-divider"><div class="tm-hotel-info">숙박: Holiday Inn Pasteur</div>
+                    </td>
+                    <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조:</strong> 호텔</div><div class="tm-meal-simple"><strong>중:</strong> Rasa Lasa</div><div class="tm-meal-simple"><strong>석:</strong> Wheel's</div></div></td>
+                </tr>
+                <tr class="tm-day-divider">
+                    <td class="tm-col-date">제3일<br>8/11(화)<br>학교</td>
+                    <td class="tm-col-desc">
+                        <div class="tm-time-flow"><span class="tm-time-tag">종일</span> Temasek 버디 수업 · 앙클룽</div>
+                        <ul class="tm-desc-list">
+                            <li>06:00 조식</li>
+                            <li>07:30 <span class="tm-highlight">Temasek Independent School</span> 버디 수업</li>
+                            <li>12:15 마트미션 Griya Pasteur</li>
+                            <li><span class="tm-highlight">사웅 앙클룽 우조</span> 공연 (15:30)</li>
+                            <li>18:00 Hachi Grill 석식 · 19:30 호텔</li>
+                        </ul>
+                        <hr class="tm-hotel-divider"><div class="tm-hotel-info">숙박: Holiday Inn Pasteur</div>
+                    </td>
+                    <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조:</strong> 호텔</div><div class="tm-meal-simple"><strong>중:</strong> 도시락(한식)</div><div class="tm-meal-simple"><strong>석:</strong> Hachi Grill</div></div></td>
+                </tr>
+                <tr class="tm-day-divider">
+                    <td class="tm-col-date">제4일<br>8/12(수)<br>귀국</td>
+                    <td class="tm-col-desc">
+                        <div class="tm-time-flow"><span class="tm-time-tag">전일</span> 학교 · 출국</div>
+                        <ul class="tm-desc-list">
+                            <li>06:00 조식</li>
+                            <li>07:30 Temasek 버디 수업</li>
+                            <li>11:45 Hara Cafe 중식</li>
+                            <li>13:00 PVJ 쇼핑</li>
+                            <li>14:30 자카르타공항 이동 · 18:00 체크인</li>
+                            <li>21:50 자카르타 출발</li>
+                        </ul>
+                    </td>
+                    <td class="tm-col-meal"><div class="tm-meal-wrapper"><div class="tm-meal-simple"><strong>조:</strong> 호텔</div><div class="tm-meal-simple"><strong>중:</strong> Hara Cafe</div><div class="tm-meal-simple"><strong>석:</strong> 공항</div></div></td>
+                </tr>
+                <tr class="tm-day-divider">
+                    <td class="tm-col-date">제5일<br>8/13(목)<br>귀교</td>
+                    <td class="tm-col-desc">
+                        <div class="tm-time-flow"><span class="tm-time-tag">오전</span> 인천 도착 · 곡성 귀교</div>
+                        <ul class="tm-desc-list">
+                            <li>07:10 인천 도착</li>
+                            <li>08:45 공항버스 광명 · 10:11 KTX 곡성</li>
+                            <li>12:15 곡성역 도착 · 해산</li>
+                        </ul>
+                    </td>
+                    <td class="tm-col-meal"><div class="tm-meal-wrapper"></div></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="print-disclaimer">※ 본 일정은 예정 일정표이며, 현지 사정·항공·교통 상황에 따라 변동될 수 있습니다.</div>
+        <div class="print-contacts">
+            <span><span class="pc-role">QB</span>김회란 010-3453-0584</span>
+            <span><span class="pc-role">QB</span>최민태 010-7369-5230</span>
+            <span><span class="pc-role">대사관</span>+62-21-520-1915</span>
+        </div>
+        <div class="print-credit">
+            <p class="print-credit-badge">[System Powered by QB GLOBAL]</p>
+            <p class="print-credit-text">본 스마트 가이드북은 <strong>고달초등학교</strong>의 기획과 큐비글로벌(QB Global)의 트래블 테크 기술 제휴로 제작</p>
+        </div>
+        <div class="print-footer-area"><span>고달초등학교 · 전남 곡성</span><span>QB-260809-GODAL</span></div>
+    </div>
+
+    <script>
+        const QB_LOGO='https://blogger.googleusercontent.com/img/a/AVvXsEjPMO83G1xHJIu1jKvn1GjQn_C3z42tM-LYvYPKcGIaYkarv47vw5TlYsJFjZxRLVm4e0yQutvIHXQ_VBUHdlu2p25QP7z1NAK2XsEUNUpxycDMpLzi7TJ390gXDpD5orf1OBAXwbwnPrasas06glRIv9rpqwN1YEQvy2fPbKRU4Ogpbo8SyH7NEnt-1FY=w320-h101';
+        function showToast(m){const t=document.getElementById('toast');document.getElementById('toast-msg').innerText=m;t.classList.remove('translate-y-20','opacity-0');setTimeout(()=>t.classList.add('translate-y-20','opacity-0'),3000)}
+        function updateDday(){
+            const start=new Date('2026-08-09T00:00:00'),end=new Date('2026-08-13T23:59:59'),today=new Date();today.setHours(0,0,0,0);
+            const diff=Math.ceil((start-today)/86400000),badge=document.getElementById('d-day-badge'),hero=document.getElementById('hero-date');
+            if(diff>0){badge.className='bg-[#0284c7] text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm animate-pulse';badge.innerText='D-'+diff}
+            else if(today<=end){const d=Math.abs(diff)+1;badge.className='bg-red-600 text-white text-[10px] px-2.5 py-1 rounded-full font-bold shadow-sm animate-pulse';badge.innerText='📍 '+d+'일차';hero.innerHTML='고달초등학교 '+d+'일차 여정이 진행 중입니다.'}
+            else{badge.className='bg-slate-500 text-white text-[10px] px-2.5 py-1 rounded-full font-bold';badge.innerText='🏁 종료';hero.innerHTML='모든 여정이 종료되었습니다. 좋은 추억 되세요!'}
+        }
+        updateDday();
+        function renderWeather(id,lat,lon,tz){
+            fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone='+encodeURIComponent(tz))
+            .then(r=>r.json()).then(data=>{
+                const c=document.getElementById(id),days=['일','월','화','수','목','금','토'];c.innerHTML='';
+                for(let i=0;i<7;i++){const d=new Date(data.daily.time[i]),w=data.daily.weathercode[i];
+                let ic='fa-cloud text-slate-300';if(w===0)ic='fa-sun text-orange-400';else if(w<=3)ic='fa-cloud-sun text-yellow-400';else if(w<=67)ic='fa-cloud-rain text-blue-400';
+                c.innerHTML+=`<div class="flex flex-col items-center bg-white p-2 rounded-lg border min-w-[65px] shadow-sm shrink-0"><span class="text-[9px] text-slate-400">${d.getMonth()+1}/${d.getDate()}(${days[d.getDay()]})</span><i class="fa-solid ${ic} text-lg mb-1"></i><span class="text-[10px] font-bold">${Math.round(data.daily.temperature_2m_min[i])}°/${Math.round(data.daily.temperature_2m_max[i])}°</span></div>`}
+            }).catch(()=>{document.getElementById(id).innerHTML='<p class="text-xs text-red-400">날씨 오류</p>'});
+        }
+        renderWeather('weather-bandung',-6.917,107.619,'Asia%2FJakarta');
+        renderWeather('weather-jakarta',-6.208,106.845,'Asia%2FJakarta');
+        let exRate=0.085;
+        fetch('https://open.er-api.com/v6/latest/IDR').then(r=>r.json()).then(d=>{exRate=d.rates.KRW*1.015;renderPrices()}).catch(()=>renderPrices());
+        function calcKRW(){const v=document.getElementById('idr-input').value;document.getElementById('krw-output').innerText=v?Math.round(v*exRate).toLocaleString():'0'}
+        function renderPrices(){
+            const items=[{n:'물/음료',p:5000},{n:'과자·스낵',p:10000},{n:'아이스크림',p:15000},{n:'기념품',p:50000},{n:'식사(1인)',p:80000}];
+            document.getElementById('price-list').innerHTML=items.map(i=>`<div class="flex justify-between py-1.5 border-b border-slate-50 last:border-0"><span class="text-slate-600">${i.n}</span><div class="text-right"><span class="font-bold">${Math.round(i.p*exRate).toLocaleString()}원</span><span class="text-[9px] text-slate-400 ml-1">(Rp${i.p.toLocaleString()})</span></div></div>`).join('');
+        }
+        const CHECK_KEY='godal_bandung_check_v1',CHECK_ITEMS=['여권 (유효기간 6개월 이상)','편한 운동화·여름 옷','모기 기피제·선크림','개인 상비약','IDR 환전 또는 카드','충전기·보조배터리','필기도구·학습 노트','학교·인솔 교사 연락처 메모'];
+        function renderChecklist(){
+            const c=document.getElementById('checklist-container'),saved=JSON.parse(localStorage.getItem(CHECK_KEY)||'{}');
+            c.innerHTML=CHECK_ITEMS.map((l,i)=>{const id='chk_'+i;return`<label class="flex items-center gap-3 bg-white border rounded-xl px-4 py-3 cursor-pointer hover:bg-sky-50 shadow-sm"><input type="checkbox" id="${id}" ${saved[id]?'checked':''} class="h-5 w-5 text-[#0284c7] rounded"><span class="text-sm font-medium">${l}</span></label>`}).join('');
+            c.querySelectorAll('input').forEach(cb=>cb.addEventListener('change',()=>{const s=JSON.parse(localStorage.getItem(CHECK_KEY)||'{}');s[cb.id]=cb.checked;localStorage.setItem(CHECK_KEY,JSON.stringify(s))}));
+        }
+        renderChecklist();
+        function promptResetChecklist(){document.getElementById('custom-confirm').classList.remove('hidden');document.getElementById('custom-confirm').classList.add('flex')}
+        function closeConfirmModal(){document.getElementById('custom-confirm').classList.add('hidden');document.getElementById('custom-confirm').classList.remove('flex')}
+        function executeResetChecklist(){localStorage.removeItem(CHECK_KEY);renderChecklist();closeConfirmModal();showToast('체크리스트가 초기화되었습니다.')}
+        (function(){const m=document.getElementById('travel-memo'),K='godal_bandung_memo_v1';if(!m)return;m.value=localStorage.getItem(K)||'';m.addEventListener('input',()=>localStorage.setItem(K,m.value))})();
+        function openPhraseModal(){document.getElementById('phrase-modal').classList.remove('hidden');document.getElementById('phrase-modal').classList.add('flex')}
+        function closePhraseModal(){document.getElementById('phrase-modal').classList.add('hidden');document.getElementById('phrase-modal').classList.remove('flex');document.getElementById('phrase-display').classList.add('hidden')}
+        function showPhrase(e,k,l){document.getElementById('p-emoji').innerText=e;document.getElementById('p-kr-meaning').innerText=k;document.getElementById('p-local').innerText=l;const d=document.getElementById('phrase-display');d.classList.remove('hidden');d.classList.add('flex')}
+        function shareLink(){const u=window.location.href;if(navigator.share)navigator.share({title:'고달초 반둥 가이드북',url:u}).catch(()=>{});else navigator.clipboard.writeText(u).then(()=>showToast('링크가 복사되었습니다.'))}
+        function printSchedule(){window.print()}
+        let map,layerGroup;
+        const spots={
+            gokseong:{c:[35.275,127.292],t:'곡성역',col:'#64748b',i:'🚉'},
+            gwangmyeong:{c:[37.416,126.884],t:'광명역',col:'#94a3b8',i:'🚄'},
+            icn:{c:[37.460,126.440],t:'인천공항',col:'#0284c7',i:'✈️'},
+            cgk:{c:[-6.127,106.653],t:'자카르타 CGK',col:'#0369a1',i:'✈️'},
+            hotel:{c:[-6.895,107.576],t:'Holiday Inn Pasteur',col:'#0284c7',i:'🏨'},
+            tangkuban:{c:[-6.770,107.601],t:'땅꾸반 뿌르후',col:'#16a34a',i:'🌋'},
+            trans:{c:[-6.917,107.635],t:'Trans Studio',col:'#db2777',i:'🎢'},
+            temasek:{c:[-6.891,107.609],t:'Temasek School',col:'#0284c7',i:'🎓'},
+            angklung:{c:[-6.921,107.623],t:'사웅 앙클룽 우조',col:'#8b5cf6',i:'🎵'},
+            pvj:{c:[-6.888,107.596],t:'PVJ',col:'#f59e0b',i:'🛍️'}
+        };
+        const routes={
+            all:{p:['gokseong','gwangmyeong','icn','cgk','hotel','tangkuban','trans','temasek','angklung','pvj','cgk','icn','gokseong'],l:[
+                {pts:[spots.gokseong.c,spots.gwangmyeong.c,spots.icn.c],c:'#64748b'},
+                {pts:[spots.icn.c,spots.cgk.c,spots.hotel.c],c:'#0284c7'},
+                {pts:[spots.hotel.c,spots.tangkuban.c,spots.trans.c,spots.hotel.c],c:'#16a34a'},
+                {pts:[spots.hotel.c,spots.temasek.c,spots.angklung.c,spots.hotel.c],c:'#8b5cf6'},
+                {pts:[spots.hotel.c,spots.temasek.c,spots.pvj.c,spots.cgk.c],c:'#f59e0b'},
+                {pts:[spots.cgk.c,spots.icn.c,spots.gokseong.c],c:'#0369a1'}
+            ]},
+            day1:{p:['gokseong','gwangmyeong','icn','cgk'],l:[{pts:[spots.gokseong.c,spots.gwangmyeong.c,spots.icn.c,spots.cgk.c],c:'#0284c7'}]},
+            day2:{p:['cgk','hotel','tangkuban','trans'],l:[{pts:[spots.cgk.c,spots.hotel.c,spots.tangkuban.c,spots.trans.c,spots.hotel.c],c:'#16a34a'}]},
+            day3:{p:['hotel','temasek','angklung'],l:[{pts:[spots.hotel.c,spots.temasek.c,spots.angklung.c,spots.hotel.c],c:'#8b5cf6'}]},
+            day4:{p:['hotel','temasek','pvj','cgk'],l:[{pts:[spots.hotel.c,spots.temasek.c,spots.pvj.c,spots.cgk.c],c:'#f59e0b'}]},
+            day5:{p:['icn','gwangmyeong','gokseong'],l:[{pts:[spots.icn.c,spots.gwangmyeong.c,spots.gokseong.c],c:'#64748b'}]}
+        };
+        function initMap(){
+            if(map||typeof L==='undefined')return;
+            map=L.map('map',{scrollWheelZoom:false}).setView([-2.5,110],5);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'&copy; CARTO'}).addTo(map);
+            layerGroup=L.layerGroup().addTo(map);
+            changeMapAndTab(window.innerWidth<1024?'day1':'all');
+            setTimeout(()=>map.invalidateSize(),300);
+        }
+        function changeMapAndTab(dayId){
+            if(dayId!=='all'){
+                document.querySelectorAll('.schedule-content').forEach(el=>el.classList.add('hidden'));
+                const t=document.getElementById(dayId);
+                if(t){t.classList.remove('hidden');t.classList.add('animate-fade-in-up')}
+            }
+            document.querySelectorAll('.map-tab-btn').forEach(btn=>{btn.classList.remove('active','bg-[#0284c7]','text-white','border-[#0284c7]','shadow-sm');btn.classList.add('bg-white','text-slate-600','border-slate-300')});
+            document.querySelectorAll('.sched-tab').forEach(btn=>{btn.classList.remove('text-[#0284c7]','border-b-2','border-[#0284c7]');btn.classList.add('text-slate-500')});
+            const schedDay=dayId==='all'?'day1':dayId;
+            document.querySelectorAll(`button[onclick="changeMapAndTab('${dayId}')"]`).forEach(btn=>{
+                if(btn.classList.contains('map-tab-btn')){btn.classList.add('active','bg-[#0284c7]','text-white','border-[#0284c7]','shadow-sm');btn.classList.remove('bg-white','text-slate-600','border-slate-300')}
+            });
+            document.querySelectorAll(`button[onclick="changeMapAndTab('${schedDay}')"]`).forEach(btn=>{
+                if(btn.classList.contains('sched-tab')){btn.classList.add('text-[#0284c7]','border-b-2','border-[#0284c7]');btn.classList.remove('text-slate-500')}
+            });
+            if(!map||!layerGroup)return;
+            layerGroup.clearLayers();
+            const route=routes[dayId]||routes.all;let bounds=L.latLngBounds();
+            route.l.forEach(line=>{L.polyline(line.pts,{color:line.c,weight:4,opacity:.8}).addTo(layerGroup)});
+            route.p.forEach((key,idx)=>{const s=spots[key];bounds.extend(s.c);
+                L.marker(s.c,{icon:L.divIcon({className:'',html:`<div class="map-marker-bubble" style="background:${s.col};width:32px;height:32px;animation:popIn .5s forwards ${idx*.2}s">${s.i}</div>`,iconSize:[32,32],iconAnchor:[16,16]})}).bindTooltip('<b>'+s.t+'</b>').addTo(layerGroup)});
+            map.fitBounds(bounds,{padding:[40,40],maxZoom:dayId==='all'?5:12});
+            setTimeout(()=>map.invalidateSize(),300);
+            if(window.innerWidth<1024&&dayId!=='all')document.getElementById(dayId)?.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+        window.addEventListener('load',initMap);
+        window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(()=>map&&map.invalidateSize(),200)});
+    </script>
+</body>
+</html>
