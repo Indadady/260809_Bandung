@@ -14,7 +14,11 @@
     <meta name="description" content="고달초등학교 2026 인도네시아 반둥 Temasek Independent School 국제교류·체험 3박5일 공식 스마트 가이드북">
     <meta property="og:title" content="[고달초] 🇮🇩 반둥 국제교류·체험 스마트 가이드북">
     <meta property="og:description" content="고달초등학교 5·6학년 학생 및 학부모님께 공유드리는 상세 일정 및 교육 프로그램 안내입니다.">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/640px-Gedung_Sate_Bandung.jpg">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DU-4x-GBHa3nrj4s97dgc6GyBSq1rP9bDNNHbnuB9OdMsXWImiRf0oJ-&amp;s=10">
+    <meta property="og:image:alt" content="Temasek Independent School — 고달초 인도네시아 반둥 국제교류">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DU-4x-GBHa3nrj4s97dgc6GyBSq1rP9bDNNHbnuB9OdMsXWImiRf0oJ-&amp;s=10">
+    <link rel="image_src" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DU-4x-GBHa3nrj4s97dgc6GyBSq1rP9bDNNHbnuB9OdMsXWImiRf0oJ-&amp;s=10">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{qb:'#0284c7'}}}}</script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -24,7 +28,7 @@
     <style>
         :root{--qb:#0284c7;--qb-dark:#0369a1}
         body{font-family:'Noto Sans KR',sans-serif;background:#f8fafc;color:#1e293b}
-        .hero-bg{background:linear-gradient(rgba(15,23,42,.55),rgba(2,132,199,.75)),url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/1280px-Gedung_Sate_Bandung.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+        .hero-bg{background:linear-gradient(rgba(15,23,42,.55),rgba(2,132,199,.75)),url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXgwUwkD7na979fimdakQOu-Jz-kXQ4syE1sD_7MLrFYyZFJtZuqi9rg&s=10');background-size:cover;background-position:center;background-attachment:fixed}
         @media(max-width:768px){.hero-bg{background-attachment:scroll}}
         #map{height:360px;width:100%;border-radius:1rem;box-shadow:0 10px 15px -3px rgba(0,0,0,.1);z-index:10}
         @media(min-width:1024px){#map{height:600px}}
@@ -347,7 +351,7 @@
                         </ul>
                     </div>
                     <div class="rounded-3xl overflow-hidden shadow-lg border">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gedung_Sate_Bandung.jpg/640px-Gedung_Sate_Bandung.jpg" alt="반둥 도시" class="w-full h-64 object-cover">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9DU-4x-GBHa3nrj4s97dgc6GyBSq1rP9bDNNHbnuB9OdMsXWImiRf0oJ-&s=10" alt="Temasek Independent School" class="w-full h-64 object-cover">
                         <div class="bg-[#0284c7] text-white p-4 text-sm font-medium text-center">반둥 · 인도네시아 서자바 문화·교육의 중심</div>
                     </div>
                 </div>
@@ -363,7 +367,7 @@
                     <span class="text-xs font-bold bg-sky-100 text-[#0284c7] px-2 py-1 rounded">8/10~8/12 · 3박</span>
                     <h3 class="text-2xl font-bold mt-3 mb-2">Holiday Inn Bandung Pasteur</h3>
                     <p class="text-sm text-slate-500 mb-4">Jl. Pasteur No. 28, Bandung, West Java</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bandung_view_from_Gedung_Sate.jpg/640px-Bandung_view_from_Gedung_Sate.jpg" alt="반둥 전경" class="rounded-xl w-full h-48 object-cover my-4">
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRVB3Sz6r3gmsRX6-vRMn4joXinA7wc7FI2VxEV_KRsVzBKrDZCd--EsNzYy-bU" alt="Holiday Inn Bandung Pasteur" class="rounded-xl w-full h-48 object-cover my-4">
                     <ul class="text-sm text-slate-600 space-y-2">
                         <li>✅ 반둥 Pasteur 지역 · Temasek 학교·PVJ 접근 편리</li>
                         <li>✅ 조식 포함 · 7명 소규모 맞춤 배정</li>
@@ -644,17 +648,37 @@
             else{badge.className='bg-slate-500 text-white text-[10px] px-2.5 py-1 rounded-full font-bold';badge.innerText='🏁 종료';hero.innerHTML='모든 여정이 종료되었습니다. 좋은 추억 되세요!'}
         }
         updateDday();
-        function renderWeather(id,lat,lon,tz){
-            fetch('https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone='+encodeURIComponent(tz))
-            .then(r=>r.json()).then(data=>{
-                const c=document.getElementById(id),days=['일','월','화','수','목','금','토'];c.innerHTML='';
-                for(let i=0;i<7;i++){const d=new Date(data.daily.time[i]),w=data.daily.weathercode[i];
-                let ic='fa-cloud text-slate-300';if(w===0)ic='fa-sun text-orange-400';else if(w<=3)ic='fa-cloud-sun text-yellow-400';else if(w<=67)ic='fa-cloud-rain text-blue-400';
-                c.innerHTML+=`<div class="flex flex-col items-center bg-white p-2 rounded-lg border min-w-[65px] shadow-sm shrink-0"><span class="text-[9px] text-slate-400">${d.getMonth()+1}/${d.getDate()}(${days[d.getDay()]})</span><i class="fa-solid ${ic} text-lg mb-1"></i><span class="text-[10px] font-bold">${Math.round(data.daily.temperature_2m_min[i])}°/${Math.round(data.daily.temperature_2m_max[i])}°</span></div>`}
-            }).catch(()=>{document.getElementById(id).innerHTML='<p class="text-xs text-red-400">날씨 오류</p>'});
+        function weatherIcon(code){
+            if(code===0)return{ic:'fa-sun text-orange-400',d:'맑음'};
+            if(code<=3)return{ic:'fa-cloud-sun text-yellow-400',d:'구름조금'};
+            if(code<=48)return{ic:'fa-smog text-slate-400',d:'안개'};
+            if(code<=67)return{ic:'fa-cloud-rain text-blue-400',d:'비'};
+            if(code<=82)return{ic:'fa-cloud-showers-heavy text-blue-500',d:'소나기'};
+            return{ic:'fa-cloud-bolt text-purple-500',d:'뇌우'};
         }
-        renderWeather('weather-bandung',-6.917,107.619,'Asia%2FJakarta');
-        renderWeather('weather-jakarta',-6.208,106.845,'Asia%2FJakarta');
+        async function renderWeather(id,lat,lon){
+            const el=document.getElementById(id);
+            if(!el)return;
+            try{
+                const url='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lon+'&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Asia%2FJakarta';
+                const res=await fetch(url);
+                if(!res.ok)throw new Error('HTTP '+res.status);
+                const data=await res.json();
+                if(!data.daily||!data.daily.time)throw new Error('no daily data');
+                const days=['일','월','화','수','목','금','토'];
+                el.innerHTML=data.daily.time.slice(0,7).map((t,i)=>{
+                    const parts=t.split('-'),d=new Date(+parts[0],+parts[1]-1,+parts[2]);
+                    const w=data.daily.weathercode[i],info=weatherIcon(w);
+                    return`<div class="flex flex-col items-center bg-white p-2 rounded-lg border min-w-[65px] shadow-sm shrink-0"><span class="text-[9px] text-slate-400">${+parts[1]}/${+parts[2]}(${days[d.getDay()]})</span><i class="fa-solid ${info.ic} text-lg mb-1"></i><span class="text-[10px] font-bold">${Math.round(data.daily.temperature_2m_min[i])}°/${Math.round(data.daily.temperature_2m_max[i])}°</span></div>`;
+                }).join('');
+            }catch(e){
+                el.innerHTML='<p class="text-xs text-amber-600 p-2">날씨 정보를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.</p>';
+            }
+        }
+        document.addEventListener('DOMContentLoaded',()=>{
+            renderWeather('weather-bandung',-6.917,107.619);
+            renderWeather('weather-jakarta',-6.208,106.845);
+        });
         let exRate=0.085;
         fetch('https://open.er-api.com/v6/latest/IDR').then(r=>r.json()).then(d=>{exRate=d.rates.KRW*1.015;renderPrices()}).catch(()=>renderPrices());
         function calcKRW(){const v=document.getElementById('idr-input').value;document.getElementById('krw-output').innerText=v?Math.round(v*exRate).toLocaleString():'0'}
